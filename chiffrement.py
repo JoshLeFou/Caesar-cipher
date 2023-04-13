@@ -1,11 +1,8 @@
 import string
 
-# On génère l'alphabet avec la librairie string
 alphabet = string.ascii_lowercase
-# On transforme notre alphabet en une liste
 alphabet = list(alphabet)
 
-# On dédouble la liste
 for lettres in range(len(alphabet)):
     alphabet.append(alphabet[lettres])
 
@@ -14,14 +11,13 @@ message = message.lower()
 print(message)
 clef = int(input('Entrez votre clef : '))
 
-# Fonction de chiffrage de césar
 def chiffrage(lettre, alphabet, clef):
     for x in range(len(alphabet)):
-        if lettre == ' ': # Dans le cas où il y aurait un espace
+        if lettre == ' ':
             return ' '
-        elif alphabet[x] == lettre: # Chiffrement avec la clé donnée
+        elif alphabet[x] == lettre:
             return str(alphabet[x+clef])
-    return '?' # Si un caractère inconnu (comme 'é', 'ù', 'à'), afficher '?'
+    return '?'
         
 message_chiffre = ''
 
