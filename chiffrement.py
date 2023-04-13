@@ -6,6 +6,7 @@ alphabet = list(alphabet)
 for lettres in range(len(alphabet)):
     alphabet.append(alphabet[lettres])
 
+
 message = input('Entrez le message à chiffrer : ')
 message = message.lower()
 print(message)
